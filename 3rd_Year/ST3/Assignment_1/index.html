@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Assignment 1</title>
+    </head>
+    <style>
+        *{
+            font-family: "Roboto";
+        }
+        .form{
+            display: block;
+        }
+        .formItem{
+            display: block;
+            margin: 1em;
+            padding: 1em;
+            box-shadow: 1px 1px 5px #888888;
+            background-color: white;
+        }
+        .titleText{
+            text-align: center;
+            font-size: 2em;
+            text-decoration: underline;
+        }
+    </style>
+    <body>
+        <p class="titleText">Registration Form</p>
+        <form method="GET|POST">
+            <input class="formItem" type="text" placeholder="Enter Name..." required id="name" maxlength="100" required>
+            <input class="formItem" type="text" placeholder="Enter Email..." required id="email" maxlength="100" required>
+            <input class="formItem" type="date"  required id="dob">
+            <input class="formItem" type="number" placeholder="Enter Phone Number..." required id="phoneNumber" maxlength="10" required>
+            <input  type="radio" name="gender" value="Male" id="genderMale" checked>Male
+            <input  type="radio" name="gender" value="Female" id="genderFemale">Female <br>
+            <input  type="checkbox"  value="Web Developer" id="job1">Web Developer
+            <input  type="checkbox"  value="Programmer" id="job2">Programmer
+            <input  type="checkbox"  value="Manager" id="job3">Manager
+            <input class="formItem" type="file" id="resumeFile">
+            <input class="formItem" type="file" id="idFile">
+            <input type="submit" id="submitBtn" value="Submit Information">
+        </form>
+    </body>
+</html>

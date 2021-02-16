@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 8 - Submit Form</title>
+	</head>
+	<style>
+	*{
+		font-family: "Helvetica";
+		font-size: 16px;
+	}
+	*{
+		padding: 0px auto;
+		margin: 0px auto;
+	}
+	table{
+		margin: 20px auto;
+		background:lightblue;
+		padding: 10px;	
+		border: 1px solid rgb(77,183,255);		
+	}
+	td{
+		padding: 5px;
+		border: none;
+	}
+	th{
+		font-size: 28px;
+		color: blue;
+		padding: 5px;
+		text-decoration:underline;
+	}
+	input{
+		padding: 2px 2px 2px 7px;
+		width: 200px;
+		font-size: 16px;
+		border: none;
+		border-radius: 10px;
+
+	
+	}
+	select{
+		padding: 2px 2px 2px 3px ;
+		width: 210px;
+		border: none;
+		border-radius: 10px;
+	}
+	#gender{
+		width:20px;
+	}
+	#disclaimer{
+		width: 20px;
+	}
+	#submit{
+		margin-left: 110px;
+		width: 100px;
+	}
+	#display{
+		width: 100px;
+	}
+	.tooltip {
+		position: relative;
+		display: inline-block;
+	}
+
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		width: 400px;
+		background-color: black;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;	
+		position: absolute;
+		z-index: 1;
+		top: -5px;
+		left: 105%;
+	}
+
+	.tooltip:hover .tooltiptext{
+		visibility: visible;
+	}
+	</style>
+	
+	<body>
+	
+			<table>
+				<tr>					
+					<th colspan=2><center>Submit Form</center></th>
+				</tr>
+				<tr>
+					<td>Username*</td>
+					<td>
+						<div class="tooltip">
+							<input type="text" id="username" placeholder="Enter Username..."  maxlength=12 onfocus="onFocus(document.getElementById('username'))" onfocusout="onFocusOut(document.getElementById('username'))" >
+							<span class="tooltiptext">Must be 7 to 12 characters.</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Password*</td>
+					<td>
+						<div class="tooltip">
+							<input type="password" id="password" placeholder="Enter Password..." maxlength=10 onfocus="onFocus(document.getElementById('password'))" onfocusout="onFocusOut(document.getElementById('password'))">
+							<span class="tooltiptext">Must be 5 to 10 characters.</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Confirm Password*</td>
+					<td>
+						<div class="tooltip">
+							<input type="password" id="conf-password" placeholder="Enter Password Again..." maxlength=10 onfocus="onFocus(document.getElementById('conf-password'))" onfocusout="onFocusOut(document.getElementById('conf-password'))">
+							<span class="tooltiptext">Enter your password again.</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>First Name*</td>
+					<td>
+						<div class="tooltip">
+							<input type="text" id="first-name" placeholder="Enter First Name..." maxlength=50 onfocus="onFocus(document.getElementById('first-name'))" onfocusout="onFocusOut(document.getElementById('first-name'))">
+							<span class="tooltiptext">Enter Valid First Name.</span>
+						</div>
+						</td>
+				</tr>
+				<tr>
+					<td>Last Name*</td>
+					<td>
+						<div class="tooltip">
+							<input type="text" id="last-name" placeholder="Enter Last Name..." maxlength=50 onfocus="onFocus(document.getElementById('last-name'))" onfocusout="onFocusOut(document.getElementById('last-name'))" disabled>
+							<span class="tooltiptext">Enter Valid Last Name.</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Age*</td>
+					<td>
+						<div class="tooltip">
+							<input type="number" id="age" placeholder="Enter Age..." maxlength=50 onfocus="onFocus(document.getElementById('age'))" onfocusout="onFocusOut(document.getElementById('age'))">
+							<span class="tooltiptext">Must  be older than 22 Years.</span>
+						</div>
+					</td>							
+				</tr>
+				<tr>
+					<td>Email*</td>
+					<td>
+						<div class="tooltip">
+							<input type="email" id="email" placeholder="Enter Email..." maxlength=50 onfocus="onFocus(document.getElementById('email'))" onfocusout="onFocusOut(document.getElementById('email'))">
+							<span class="tooltiptext">Enter Valid Email Address.</span>
+						</div>
+					</td>				
+				</tr>
+				<tr>
+					<td>Phone*</td>
+					<td>
+						<div class="tooltip">
+							<input type="number" id="phone" placeholder="Enter Phone..." maxlength=12 onfocus="onFocus(document.getElementById('phone'))" onfocusout="onFocusOut(document.getElementById('phone'))">
+							<span class="tooltiptext">Enter Valid Phone Number (10 - 12 digits).</span>
+						</div>
+						</td>
+				</tr>
+				<tr>
+					<td>Fax*</td>
+					<td>
+						<div class="tooltip">
+							<input type="number" id="fax" placeholder="Enter Fax..." maxlength=12 onfocus="onFocus(document.getElementById('fax'))" onfocusout="onFocusOut(document.getElementById('fax'))" disabled>
+							<span class="tooltiptext">Enter Valid Fax Number (8 - 12 digits).</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Date Of Birth*</td>
+					<td>
+						<div class="tooltip">
+							<input type="date" id="dob" placeholder="Enter Date Of Birth..." onfocus="onFocus(document.getElementById('dob'))" onfocusout="onFocusOut(document.getElementById('dob'))">
+							<span class="tooltiptext">Must be born before 01-01-1997.</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Website*</td>
+					<td>
+						<div class="tooltip">
+							<input type="text" id="website" placeholder="Enter Your Website..." maxlength=50 onfocus="onFocus(document.getElementById('website'))" onfocusout="onFocusOut(document.getElementById('website'))">
+							<span class="tooltiptext">Enter Valid Website URL.</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Country*</td>
+					<td>
+						<div class="tooltip">						
+							<select name="country" id="country" onfocus="onFocus(document.getElementById('country'))" onfocusout="onFocusOut(document.getElementById('country'))">
+							<option value="china">China</option>
+							<option value="india">India</option>
+							<option value="russia">Russia</option>
+							<option value="usa">United States</option>
+							</select>
+							<span class="tooltiptext">Enter Valid Country.</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Gender*</td>
+					<td><input type="radio" name="gender" value="Male" id="gender" checked> Male<input type="radio" name="gender" value="Female" id="gender"> Female</td>
+				</tr>
+				<tr>
+					<td>Disclaimer*</td>
+					<td>
+						<div class="tooltip">
+							<input type="checkbox" name="disclaimer"  id="disclaimer">
+							<span class="tooltiptext">Please check if necessary.</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" id="display" onclick="display()" value="Display"></td>
+					<td><a href="#username"><input type="button" id="submit" onclick="validateForm()" value="Submit"></a></td>
+				</tr>
+			</table>
+		<script>
+			validateForm = function(){
+				var userTV =document.getElementById("username");
+				var passTV  = document.getElementById("password");
+				var cPassTV = document.getElementById("conf-password");
+				var firstNameTV =document.getElementById("first-name");
+				var lastNameTV = document.getElementById("last-name");
+				var ageTV = document.getElementById("age");
+				var emailTV = document.getElementById("email");
+				var phoneTV = document.getElementById("phone");
+				var faxTV = document.getElementById("fax");
+				var dobTV =document.getElementById("dob");
+				var websiteTV = document.getElementById("website");
+				var countryTV =document.getElementById("country");
+				var genderTV =document.getElementById("gender");
+				var DisclaimerTV =document.getElementById("disclaimer");
+
+				var errorMessage="The following details have been found incorrect:-";
+
+				var checkVar=1;
+
+				var username=userTV.value;
+				var pass=passTV.value;
+				var cPass=cPassTV.value;
+				var firstName=firstNameTV.value;
+				var lastName=lastNameTV.value;
+				var age=ageTV.value;
+				var email=emailTV.value;
+				var phone=phoneTV.value;
+				var fax = faxTV.value;
+				var dob=dobTV.value;
+				var website=websiteTV.value;
+				var country=countryTV.value;
+				var gender="Male";
+				for(i = 0; i < genderTV.length; i++) { 
+					if(genderTV[i].checked) {
+						gender=genderTV[i].value; 
+						break;
+					}
+				} 
+				var disclaimer=DisclaimerTV.checked;
+
+				if(username.toString().length<7 || username.toString().length>12){
+					errorMessage+="\nUsername:- "+username;
+					checkVar=0;
+				}
+				if(pass.toString().length<5 || pass.toString().length>10){
+					errorMessage+="\nPassword:- "+pass;
+					checkVar=0;
+				}
+				if(pass.toString()!=cPass.toString() || cPass.toString()==""){
+					errorMessage+="\nConfirm Password:- "+cPass;
+					checkVar=0;
+				}
+				if(!(validateName(firstName))){					
+					errorMessage+="\nFirst Name:- "+firstName;
+					checkVar=0;
+				}
+				if(!(validateName(lastName))){					
+					errorMessage+="\nLast Name:- "+lastName;
+					checkVar=0;
+				}
+				if(parseInt(age)<22){				
+					errorMessage+="\nAge:- "+age;
+					checkVar=0;
+				}
+				if(phone.toString().length<10 || phone.toString().length>12){			
+					errorMessage+="\nPhone:- "+phone;
+					checkVar=0;
+				}				
+				if(fax.toString().length<8 || fax.toString().length>12){			
+					errorMessage+="\nFax:- "+fax;
+					checkVar=0;
+				}
+				if(dob=="")	{
+					errorMessage+="\nDate Of Birth:- ";
+					checkVar=0;
+				}	
+				dob = dob.split('-');
+				if(parseInt(dob[0])>=1997){
+					errorMessage+="\nDate Of Birth:- "+dob[2]+"-"+dob[1]+"-"+dob[0];
+					checkVar=0;
+				}
+				if(!validateURL(email)){
+					errorMessage+="\nEmail:- "+email;
+					checkVar=0;
+				}
+				if(!validateURL(website)){
+					errorMessage+="\nWebsite:- "+website;
+					checkVar=0;
+				}
+
+
+				if(checkVar==1){
+					alert("Your data has been validated!");
+				}else{
+					alert(errorMessage);
+				}
+			}
+			
+			onFocus = function(temp){
+				temp.style.background="#ccc";
+			}
+			
+			onFocusOut = function(temp){
+				temp.style.background="white";
+			}
+
+			function validateName(name){
+				var letters = /^[A-Za-z]+$/;
+				if(name.match(letters)){
+					return true;
+				}else{
+					return false;
+				}
+			}
+
+			function validateURL(url){
+				var expression = /[-a-zA-Z0-9@\.//]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%\.//]*)?/; 
+				if(url.match(expression)){
+					return true;
+				}else{
+					return false;
+				}
+			}
+
+			function display(){
+				var userTV =document.getElementById("username");
+				var passTV  = document.getElementById("password");
+				var cPassTV = document.getElementById("conf-password");
+				var firstNameTV =document.getElementById("first-name");
+				var lastNameTV = document.getElementById("last-name");
+				var ageTV = document.getElementById("age");
+				var emailTV = document.getElementById("email");
+				var phoneTV = document.getElementById("phone");
+				var faxTV = document.getElementById("fax");
+				var dobTV =document.getElementById("dob");
+				var websiteTV = document.getElementById("website");
+				var countryTV =document.getElementById("country");
+				var genderTV =document.getElementsByName("gender");
+				var DisclaimerTV =document.getElementById("disclaimer");
+
+				var username=userTV.value;
+				var pass=passTV.value;
+				var cPass=cPassTV.value;
+				var firstName=firstNameTV.value;
+				var lastName=lastNameTV.value;
+				var age=ageTV.value;
+				var email=emailTV.value;
+				var phone=phoneTV.value;
+				var fax = faxTV.value;
+				var dob=dobTV.value;
+				var website=websiteTV.value;
+				var country=countryTV.value;
+				var gender="";			
+				for(i = 0; i < genderTV.length; i++) { 
+					if(genderTV[i].checked) 
+						gender=genderTV[i].value;
+				} 
+				var disclaimer=DisclaimerTV.checked;
+
+
+				var message="The details are processed as following:- ";
+				message+="\nUsername:-              "+username;
+				message+="\nPassword:-              "+pass;
+				message+="\nConfirm Password:-      "+cPass;
+				message+="\nFirst Name:-            "+firstName;
+				message+="\nLast Name:-             "+lastName;
+				message+="\nAge:-                   "+age;
+				message+="\nEmail:-                 "+email;
+				message+="\nPhone:-                 "+phone;
+				message+="\nFax:-                   "+fax;
+				message+="\nDate Of Birth:-         "+dob;
+				message+="\nWebsite:-               "+website;
+				message+="\nCountry:-               "+country;
+				message+="\nGender:-                "+gender;
+				message+="\nDisclaimer Checked:-    "+disclaimer;
+				alert(message);
+			}
+		</script>
+	</body>
+</html>

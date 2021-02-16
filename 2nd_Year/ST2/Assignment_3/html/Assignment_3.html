@@ -1,0 +1,279 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Assignment_3</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-05-02"><meta name="DC.source" content="Assignment_3.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Question 1</a></li><li><a href="#3">Question 2</a></li><li><a href="#4">Question 3</a></li><li><a href="#5">Question 4</a></li><li><a href="#6">Question 5</a></li><li><a href="#7">Question 6</a></li><li><a href="#8">Question 7</a></li></ul></div><pre class="codeinput"><span class="comment">%Assignment 3</span>
+<span class="comment">%Author:- Krunal Rank</span>
+<span class="comment">%IDE:- MATLAB</span>
+</pre><h2 id="2">Question 1</h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+
+A = [2 3 4 5 6];
+getEven = [];
+maxIndex = findMaxIndex(A);
+getEven = getEvenFrom(A);
+fprintf(<span class="string">'Maximum Value:- %d\n'</span>,maxIndex);
+fprintf(<span class="string">'Even values:-\n'</span>);
+disp(getEven);
+</pre><pre class="codeoutput">Maximum Value:- 5
+Even values:-
+     2     4     6
+
+</pre><h2 id="3">Question 2</h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+
+prompt = <span class="string">'Enter a number:-'</span>;
+A = int32(input(prompt));
+<span class="keyword">if</span> isArmstrongNumber(A)==true
+  fprintf(<span class="string">"%d is an Armstrong Number!\n"</span>,A);
+<span class="keyword">else</span>
+  fprintf(<span class="string">"%d is not an Armstrong Number!\n"</span>,A);
+<span class="keyword">end</span>
+</pre><pre class="codeoutput error">Error using input
+Cannot call INPUT from EVALC.
+
+Error in Assignment_3 (line 23)
+A = int32(input(prompt));
+</pre><h2 id="4">Question 3</h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+
+R = int32(input(<span class="string">'Enter number of rows:-'</span>));
+C = int32(input(<span class="string">'Enter number of columns:-'</span>));
+P = zeros(R,C);
+<span class="keyword">for</span> i=1:R
+    <span class="keyword">for</span> j = 1:C
+        fprintf(<span class="string">'Enter value at (%d,%d):-'</span>,i,j);
+    	P(i,j) = input(<span class="string">''</span>);
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+[charEq,eigenVal,eigenVec] = getMatrixProp(P);
+disp(charEq);
+disp(eigenVal);
+disp(eigenVec);
+</pre><h2 id="5">Question 4</h2><pre class="codeinput">Q = input(<span class="string">'Enter Quadratic Coefficient:-'</span>);
+L = input(<span class="string">'Enter Linear Coefficient:-'</span>);
+C = input(<span class="string">'Enter Constant:-'</span>);
+roots = findQuadraticRoots(Q,L,C);
+fprintf(<span class="string">'The roots are:-\n'</span>);
+disp(roots);
+</pre><h2 id="6">Question 5</h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+
+n = int32(input(<span class="string">'Enter number of students:-'</span>));
+A = zeros(n,1);
+<span class="keyword">for</span> i = 1:n
+    A(i,1) = input(<span class="string">'Enter marks of Student '</span>+string(i)+<span class="string">' :-'</span>);
+<span class="keyword">end</span>
+status = getResult(A);
+fprintf(<span class="string">'The result of the students is as follows:-\n'</span>);
+disp(status);
+</pre><h2 id="7">Question 6</h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+
+n = int32(input(<span class="string">'Enter number:-'</span>));
+printSeries(n);
+</pre><h2 id="8">Question 7</h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+
+s = input(<span class="string">'Please enter an infix expression:-'</span>,<span class="string">'s'</span>);
+postfix = infixToPostfix(s);
+fprintf(<span class="string">'Postfix Expression:-\n'</span>)
+disp(postfix);
+
+val = evaluatePostfix(postfix);
+<span class="keyword">if</span> val==<span class="string">'null'</span>
+    fprintf(<span class="string">'Invalid Postfix Expression!\n'</span>);
+<span class="keyword">else</span>
+    fprintf(<span class="string">'Value of Infix Expression: %d\n'</span>,val);
+<span class="keyword">end</span>
+
+s = input(<span class="string">'Please enter an prefix expression:-'</span>,<span class="string">'s'</span>);
+postfix = prefixToPostfix(s);
+<span class="keyword">if</span>(postfix==<span class="string">'null'</span>)
+    fprintf(<span class="string">'Invalid Prefix Expression!\n'</span>);
+<span class="keyword">else</span>
+    fprintf(<span class="string">'Postfix Expression:- %s\n'</span>,postfix);
+    val = evaluatePostfix(char(postfix));
+    fprintf(<span class="string">'Evaluated Value of Postfix Expression:- %d\n'</span>,val);
+<span class="keyword">end</span>
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%Assignment 3
+%Author:- Krunal Rank
+%IDE:- MATLAB
+
+%% Question 1
+clc;
+clear all;
+close all;
+
+A = [2 3 4 5 6];
+getEven = [];
+maxIndex = findMaxIndex(A);
+getEven = getEvenFrom(A);  
+fprintf('Maximum Value:- %d\n',maxIndex);
+fprintf('Even values:-\n');
+disp(getEven);
+%% Question 2
+clc;
+clear all;
+close all;
+
+prompt = 'Enter a number:-';
+A = int32(input(prompt));
+if isArmstrongNumber(A)==true
+  fprintf("%d is an Armstrong Number!\n",A);
+else
+  fprintf("%d is not an Armstrong Number!\n",A);
+end
+  
+%% Question 3
+clc;
+clear all;
+close all;
+
+R = int32(input('Enter number of rows:-'));
+C = int32(input('Enter number of columns:-'));
+P = zeros(R,C);
+for i=1:R
+    for j = 1:C
+        fprintf('Enter value at (%d,%d):-',i,j);
+    	P(i,j) = input('');
+    end
+end
+[charEq,eigenVal,eigenVec] = getMatrixProp(P);
+disp(charEq);
+disp(eigenVal);
+disp(eigenVec);
+
+%% Question 4
+
+Q = input('Enter Quadratic Coefficient:-');
+L = input('Enter Linear Coefficient:-');
+C = input('Enter Constant:-');
+roots = findQuadraticRoots(Q,L,C);
+fprintf('The roots are:-\n');
+disp(roots);
+
+%% Question 5
+clc;
+clear all;
+close all;
+
+n = int32(input('Enter number of students:-'));
+A = zeros(n,1);
+for i = 1:n
+    A(i,1) = input('Enter marks of Student '+string(i)+' :-');
+end
+status = getResult(A);
+fprintf('The result of the students is as follows:-\n');
+disp(status);
+
+%% Question 6
+clc;
+clear all;
+close all;
+
+n = int32(input('Enter number:-'));
+printSeries(n);
+
+%% Question 7
+
+clc;
+clear all;
+close all;
+
+s = input('Please enter an infix expression:-','s');
+postfix = infixToPostfix(s);
+fprintf('Postfix Expression:-\n')
+disp(postfix);
+
+val = evaluatePostfix(postfix);
+if val=='null'
+    fprintf('Invalid Postfix Expression!\n');
+else
+    fprintf('Value of Infix Expression: %d\n',val);
+end
+
+s = input('Please enter an prefix expression:-','s');
+postfix = prefixToPostfix(s);
+if(postfix=='null')
+    fprintf('Invalid Prefix Expression!\n');
+else
+    fprintf('Postfix Expression:- %s\n',postfix);
+    val = evaluatePostfix(char(postfix));
+    fprintf('Evaluated Value of Postfix Expression:- %d\n',val);
+end
+
+##### SOURCE END #####
+--></body></html>

@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Area of Circle</title>
+	</head>
+	<style>
+		*{			
+			font-size: 20px;
+		}
+		#num1, #num2{
+			width: 200px;
+			height: 30px;
+			padding: 10px;
+			margin: 5px;
+			border: 2px solid black;
+		}
+		#submit{
+			width: 200px;
+			border: none;
+		}
+		#answer{		
+			padding: 10px;
+			margin: 5px;
+			font-size: 20px;
+			width: 300px;
+		}
+	</style>
+	<body>
+		<center>
+			<h1>Area of Circle</h1>
+			<br>
+			<form onsubmit="return solve()">
+					<table border="0">
+						<tr>
+							<td>Enter Radius:- </td>
+							<td>
+								<input type="text" max="50" placeholder="Enter Length" id="num1">
+							</td>
+						</tr>
+					</table>
+				<input type="submit" id="submit" value="Get Area">
+			</form>
+			<div id="answer"></div>
+		</center>
+			
+	</body>
+	
+	<script>
+		function solve(){
+			var inputNum1=document.getElementById("num1").value;	
+			if(inputNum1 == "")
+				alert("Please enter radius of circle!");
+			else{
+				var num1=parseFloat(inputNum1);
+				var area=Math.round(getArea(num1)*100)/100;
+				var division = document.getElementById("answer");
+				division.innerHTML="<h2>Area of Circle = "+area+" unit<sup>2</sup></h2>";
+			}
+			return false;
+			
+		}
+		
+		function getArea(radius){
+			return radius * radius * 3.14159;
+		}
+	</script>
+</html>

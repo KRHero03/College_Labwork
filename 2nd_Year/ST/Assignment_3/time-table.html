@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Time Table - B.Tech. Computer Engineering Semester 2</title>
+	</head>
+	<style>
+	table {
+	padding: 20px;
+    font-size: 20px;
+	border-collapse: collapse;
+	margin: 5px;
+	}
+	th,caption{
+	background-color: #f5f5f5;
+	foreground-color: 
+	}
+	th, td {
+	padding-left: 10px;
+	padding-right: 10px;
+    text-align: center;
+	border-bottom: 1px solid #ddd;
+	transition: 0.5s;
+    }
+	td.theory{
+	border-bottom: 1px solid #ddd;
+	}
+	td.lab{
+	border-bottom: 1px solid black;
+	}
+	#lunch{
+	border: 1px solid black;
+	transition: 0.5s;
+	}
+	#empty:hover{
+	background-color: #707070;
+	color: white;
+	}
+	#P1:hover{
+	background-color: #f96167;
+	color: white;
+	}
+	#P2:hover{
+	background-color: #006E6D;
+	color: white;
+	}
+	#P3:hover{
+	background-color:  #F1EA7F;
+	}
+	#P4:hover{
+	background-color:  #6F9FD8;
+	color: white;
+	}
+	#P5:hover{
+	background-color:  #223A5E;
+	color: white;
+	}
+	#P6:hover{
+	background-color:  #E47A2E;
+	color: white;
+	}
+	#P7:hover{
+	background-color:  #578CA9;
+	color: white;
+	}
+	#P8:hover{
+	background-color:  #006E51;
+	color: white;
+	}
+	#P9:hover{
+	background-color:  #D8AE47;
+	color: white;
+	}
+	#head{
+	font-family: "Verdana";
+	font-size: 30px;
+	}
+	</style>
+	<body>
+	<center>
+		<p id="head"><b>Computer Engineering Department</b></p>
+		<table>
+			<caption style="font-size: 28px;">B. Tech 2<sup>nd</sup> Year Time Table</caption>
+			<tr>
+				<th>Day</th>
+				<th>1<br>08:30<br>09:20</th>
+				<th>2<br>09:30<br>10:20</th>
+				<th>3<br>10:30<br>11:20</th>
+				<th>4<br>11:30<br>12:20</th>
+				<th>12:20<br>13:50</th>
+				<th>5<br>14:00<br>14:50</th>
+				<th>6<br>15:00<br>15:50</th>				
+				<th>7<br>16:00<br>16:50</th>
+				<th>8<br>17:00<br>17:50</th>
+			</tr>
+			<tr>
+				<td class="lab" rowspan="2">Monday</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="P2">Data Structures and Algorithms</td>
+				<td class="theory" id="P3">Computer Organisation</td>
+				<td class="theory" id="P4">Digital Circuits</td>				
+				<td class="lab" id="lunch" rowspan="10" >LUNCH</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+			</tr>
+			<tr>
+				<td class="lab" id="P1">Software Tools</td>
+				<td class="lab" id="empty">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+			</tr>
+			
+			<tr>
+				<td class="lab" rowspan="2">Tuesday</td>
+				<td class="theory" id="P2">Data Structures and Algorithms</td>
+				<td class="theory" id="P3">Computer Organisation</td>
+				<td class="theory" id="P4">Digital Circuits</td>				
+				<td class="theory" id="P5">Discrete Mathematics</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+			</tr>
+			<tr>				
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+			</tr>
+			
+			<tr>
+				<td class="lab" rowspan="2">Wednesday</td>
+				<td class="theory" id="P3">Computer Organisation Tutorial</td>
+				<td class="theory" id="P4">Digital Circuits Tutorial</td>
+				<td class="theory" id="P5">Discrete Mathematics</td>
+				<td class="theory" id="P6">Electrical Network Analysis</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+			</tr>
+			<tr>				
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="P7" colspan="2">Digital Circuits</td>
+			</tr>
+			
+			<tr>
+				<td class="lab" rowspan="2">Thursday</td>
+				<td class="theory" id="P4">Digital Circuits</td>
+				<td class="theory" id="P5">Discrete Mathematics</td>
+				<td class="theory" id="P6">Electrical Network Analysis</td>
+				<td class="theory" id="P2">Data Structures and Algorithms</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>	
+			</tr>
+			<tr>				
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>						
+				<td class="lab" id="P8" colspan="2">Data Structures and ALgorithms</td>
+				<td class="lab" id="P9" colspan="2">Computer Organisation</td>
+			</tr>
+			
+			<tr>
+				<td class="lab" rowspan="2">Friday</td>
+				<td class="theory" id="P5">Discrete Mathematics Tutorial</td>
+				<td class="theory" id="P6">Electrical Network Analysis</td>
+				<td class="theory" id="P2">Data Structures and Algorithms Tutorial</td>					
+				<td class="theory" id="P3">Computer Organisation</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+				<td class="theory" id="empty">-</td>
+			</tr>
+			<tr>				
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="empty" colspan="2">-</td>
+				<td class="lab" id="P1" colspan="2">Software Tools</td>
+			</tr>
+		</table>
+	</center>
+	</body>
+
+</html>

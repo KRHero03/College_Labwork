@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Length of String</title>
+	</head>
+	<style>
+		*{			
+			font-size: 20px;
+		}
+		#num1, #num2{
+			width: 200px;
+			height: 30px;
+			padding: 10px;
+			margin: 5px;
+			border: 2px solid black;
+		}
+		#submit{
+			width: 200px;
+			border: none;
+		}
+		#answer{		
+			padding: 10px;
+			margin: 5px;
+			font-size: 20px;
+			width: 300px;
+		}
+	</style>
+	<body>
+		<center>
+			<h1>Length of String </h1>
+			<br>
+			<form onsubmit="return solve()">
+					Enter String :- <input type="text" max="50" placeholder="Enter String" id="num1"><br>	
+				<input type="submit" id="submit" value="Get Length">
+			</form>
+			<div id="answer"></div>
+		</center>
+			
+	</body>
+	
+	<script>
+		function solve(){
+			var inputNum1=document.getElementById("num1").value;
+			
+			length = inputNum1.length;
+			
+			var division = document.getElementById("answer");
+			division.innerHTML="<h2>Length of String:- "+length+"</h2>";
+			return false;
+			
+		}
+	</script>
+</html>

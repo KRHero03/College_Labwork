@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Date</title>
+	</head>
+	<style>
+		*{			
+			font-size: 20px;
+		}
+		#num1, #num2{
+			width: 200px;
+			height: 30px;
+			padding: 10px;
+			margin: 5px;
+			border: 2px solid black;
+		}
+		#submit{
+			width: 200px;
+			border: none;
+		}
+		#answer{		
+			padding: 10px;
+			margin: 5px;
+			font-size: 20px;
+		}
+	</style>
+	<body>
+		<center>
+			<h1>Date </h1>
+			<br>
+			<form onsubmit="return solve()">
+				<input type="submit" id="submit" value="Get Date">
+			</form>
+			<div id="answer"></div>
+		</center>
+			
+	</body>
+	
+	<script>
+		function solve(){
+			var date = new Date();
+			
+			var time = date.getTime(); 
+			var timeNow = Date.now();
+			
+			var day = date.getDate();
+			var month = date.getMonth() + 1;
+			var year = date.getFullYear();
+			
+			var hour = date.getHours();
+			var minute = date.getMinutes();
+			var second = date.getSeconds();
+			var millisecond = date.getMilliseconds();
+			
+			var dateStandard = day + "/"+month+"/"+year;
+			var timeStandard = hour+":"+minute+":"+second+":"+millisecond;
+			
+			var division = document.getElementById("answer");
+			division.innerHTML="<h2>Time:- "+time+" milliseconds since January 1, 1970<br>Date Now:- "+timeNow
+				+" milliseconds since January 1, 1970<br>Date:- "+dateStandard+"<br>Time:- "+timeStandard+"</h2>";
+				
+			return false;
+			
+		}
+	</script>
+</html>

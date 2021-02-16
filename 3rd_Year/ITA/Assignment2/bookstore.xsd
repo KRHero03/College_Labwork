@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.w3schools.com/" elementFormDefault="qualified" xmlns="http://www.w3schools.com bookstore.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="bookstore">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" minOccurs="1" maxOccurs="100">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title">
+                                <xs:complexType>
+                                    <xs:attribute name="lang" type="xs:language" default="en"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="author">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Z][a-zA-Z ]*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="year">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1900"></xs:minInclusive>
+                                        <xs:maxInclusive value="2021"></xs:maxInclusive>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="price" type="xs:decimal" />
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required" />
+                        <xs:attribute name="category" default="GENERAL">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="CHILDREN" />
+                                    <xs:enumeration value="WEB" />
+                                    <xs:enumeration value="COOKING" />
+                                    <xs:enumeration value="GENERAL" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>

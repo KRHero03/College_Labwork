@@ -1,0 +1,125 @@
+p{
+	margin: 0px;
+}
+html{
+	height: 100%;
+}
+body{
+	margin: 0px;
+	font-family: "Calibri";
+	font-size: 18px;
+	height: 100%;
+}
+.main{
+	height: 100%;
+}
+.header{
+	background-color: rgb(30,60,60);
+	display: flex;
+	align-items: center;
+}
+.headerContent{
+	float: left;
+}
+.headerLogo{
+	margin: 20px;
+	width: 19vw;
+	float: left;
+}
+.headerTitle{
+	color: white;
+	font-size: 35px;
+	font-weight: bold;
+}
+.headerText{
+	color:white;
+}
+
+.divBody{
+	position: absolute;
+	display: flex;
+	bottom: 0;
+	top: 150px;
+}	
+.menu{
+	float: left;
+	background-color: rgb(99,50,50);
+	width: 40%;			
+	bottom: 0;
+}
+.menuContainer{
+	margin: 10px;
+	margin-top: 50px;
+}
+.menuItem{
+	margin: 3px;	
+	background-color: rgb(204,204,204);
+	display: flex;
+	align-items: center;
+	height:40px;
+	transition: 0.5s;
+}
+.menuItem span{
+	background-color:rgb(92,92,92);
+	height: 100%;
+}
+.menuItemText{
+	margin: 0px;
+	padding-left: 15px;
+}
+	
+.content{			
+	bottom: 0;
+	display: block;
+	background-image: url("background.jpg");
+	margin: 0px;
+	float:left;
+	width: 100%;
+}
+.contentTitle{
+	padding: 10px;
+	padding-top: 50px;
+	font-size: 30px;	
+	font-weight: bold;
+}
+.contentText{
+	padding: 10px;			
+	padding-top: 50px;
+	
+}
+.adzone{				
+	bottom: 0;
+	float: right;				
+	width: 40vw;
+	background-color: rgb(133,133,133);
+}
+.ad{
+	color: white;
+	padding: 20px;
+	text-align: center;
+	background-color: rgb(92,92,92);
+	margin: 10px;
+	margin-top: 40px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(77,93,46);
+  color: white;
+  text-align: center;
+}
+.footerText{
+	padding: 15px;
+}
+a{
+	text-decoration: none;	
+	color: black;
+}
+a :visited{
+	color:black;
+}
+.menuItem:hover{
+	color: white;
+	background-color: rgb(92,92,92);
+}

@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Addition and Subtraction using Console</title>
+	</head>
+	<style>
+		*{			
+			font-size: 20px;
+		}
+		#num1, #num2{
+			width: 200px;
+			height: 30px;
+			padding: 10px;
+			margin: 5px;
+			border: 2px solid black;
+		}
+		#submit{
+			width: 200px;
+			border: none;
+		}
+		#answer{		
+			padding: 10px;
+			margin: 5px;
+			font-size: 20px;
+		}
+	</style>
+	<body>
+		<center>
+			<h1>Addition and Subtraction of two Numbers </h1>
+			<br>
+			<form onsubmit="return solve()">
+					Enter Number 1:- <input type="text" max="50" placeholder="Enter Number 1" id="num1"><br>
+					Enter Number 2:- <input type="text" max="50" placeholder="Enter Number 2" id="num2"><br>	
+				<input type="submit" id="submit" value="Get Answer">
+			</form>
+			<div id="answer"></div>
+		</center>
+			
+	</body>
+	
+	<script>
+		function solve(){
+			var inputNum1=document.getElementById("num1").value;			
+			var inputNum2=document.getElementById("num2").value;
+			if(inputNum1=="" || inputNum2==""){
+				alert("Please enter both Numbers!");
+				return false;
+			}else{
+				var num1 = parseInt(inputNum1);
+				var num2 = parseInt(inputNum2);
+				var sum = num1+ num2;
+				var diff = num1 - num2;
+				var division = document.getElementById("answer");
+				division.innerHTML="<h2>Answers:- <br>Sum = "+sum+"<br>Difference = "+diff+"</h2>";
+				return false;
+			}
+			
+		}
+	</script>
+</html>

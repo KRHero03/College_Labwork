@@ -1,0 +1,222 @@
+<html>
+
+<head>
+    <title>
+        Assignment 1
+    </title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .base {
+        background-color: #2c6ed5;
+    }
+
+    .base2 {
+        align-items: center;
+        text-align: center;
+        display: flex;
+    }
+</style>
+
+<body class='base'>
+
+    <div class="container">
+
+        <h1 style='text-align: center; color :#fff'>NIT Surat</h1>
+        <h3 style='text-align: center; color :#fff'>MIS Registration</h3>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td colspan="1">
+                        <form class="well form-horizontal">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Full Name</label>
+                                    <div class="col-md-8 inputGroupContainer">
+                                        <div class="input-group"><span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span><input id="fullName"
+                                                name="fullName" placeholder="Full Name" class="form-control"
+                                                required="true" value="" type="text"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Address Line 1</label>
+                                    <div class="col-md-8 inputGroupContainer">
+                                        <div class="input-group"><span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-home"></i></span><input id="addressLine1"
+                                                name="addressLine1" placeholder="Address Line 1" class="form-control"
+                                                required="true" value="" type="text"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Address Line 2</label>
+                                    <div class="col-md-8 inputGroupContainer">
+                                        <div class="input-group"><span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-home"></i></span><input id="addressLine2"
+                                                name="addressLine2" placeholder="Address Line 2" class="form-control"
+                                                required="true" value="" type="text"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">City</label>
+                                    <div class="col-md-8 inputGroupContainer">
+                                        <div class="input-group"><span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-home"></i></span><input id="city"
+                                                name="city" placeholder="City" class="form-control" required="true"
+                                                value="" type="text"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">State/Province/Region</label>
+                                    <div class="col-md-8 inputGroupContainer">
+                                        <div class="input-group"><span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-home"></i></span><input id="state"
+                                                name="state" placeholder="State/Province/Region" class="form-control"
+                                                required="true" value="" type="text"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Postal Code/ZIP</label>
+                                    <div class="col-md-8 inputGroupContainer">
+                                        <div class="input-group"><span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-home"></i></span><input id="postcode"
+                                                name="postcode" placeholder="Postal Code/ZIP" class="form-control"
+                                                required="true" value="" type="text"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Email</label>
+                                    <div class="col-md-8 inputGroupContainer">
+                                        <div class="input-group"><span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-envelope"></i></span><input id="email"
+                                                name="email" placeholder="Email" class="form-control" required="true"
+                                                value="" type="text"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Phone Number</label>
+                                    <div class="col-md-8 inputGroupContainer">
+                                        <div class="input-group"><span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-earphone"></i></span><input
+                                                id="phoneNumber" name="phoneNumber" placeholder="Phone Number"
+                                                class="form-control" required="true" value="" type="text"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="container inputGroupContainer">
+                                        <button style='width: 100%' type='button' class='btn btn-primary' id='submit'>
+                                            Submit</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="modal fade bg-danger" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-body-content"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+
+<script>
+    $('#submit').on('click', () => {
+
+        const fullName = $('#fullName').val()
+        const addressLine1 = $('#addressLine1').val()
+        const addressLine2 = $('#addressLine2').val()
+        const city = $('#city').val()
+        const state = $('#state').val()
+        const postcode = $('#postcode').val()
+        const email = $('#email').val()
+        const phoneNumber = $('#phoneNumber').val()
+
+        let error = ''
+        if (!/^[A-Za-z\s]{4,}$/.test(fullName)) {
+            error +=
+                'Invalid Full Name! Full Name should only contain Alphabetical characters with at least 4 characters!<br>'
+        }
+        if (!/^[A-Za-z0-9 ,]{4,}$/.test(addressLine1)) {
+            error +=
+                'Invalid Address Line 1! Address Line should contain only Alphanumeric characters or \',\' with at least 4 characters!<br>'
+        }
+
+        if (!/^[A-Za-z\s]{2,}$/.test(city)) {
+            error += 'Invalid City! City must contain only Alphabetical Characters with at least 2 characters!<br>'
+        }
+
+        if (!/^[A-Za-z\s]{3,}$/.test(state)) {
+            error +=
+                'Invalid State! State must contain only Alphabetical Characters with at least 3 characters!<br>'
+        }
+
+        if (!parseInt(postcode) || postcode.length != 6) {
+            error += 'Invalid Post Code! Please enter valid 6 digit Postal Code!<br>'
+        }
+
+        if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+            error += 'Invalid Email! Please enter a valid Email Address!<br>'
+        }
+
+        if (phoneNumber.length != 10) {
+            error += 'Invalid Phone Number! Please enter a valid 10 digit Phone Number!<br>'
+
+        } else {
+            for (let i = 0; i < phoneNumber.length; i++) {
+                if (phoneNumber[i]>'9' || phoneNumber[i]<'0') {
+                    error += 'Invalid Phone Number! Please enter a valid 10 digit Phone Number!<br>'
+                    break;
+                }
+            }
+        }
+
+        if (error.length==0) {
+            $('#myModal').addClass('bg-success')
+            $('#myModal').removeClass('bg-danger')
+            $('.modal-title').html('Form Submitted')
+            $('#modal-body-content').html('Your Details have been saved Successfully!')
+        } else {
+            $('#myModal').addClass('bg-danger')
+            $('#myModal').removeClass('bg-suceess')
+            $('.modal-title').html('Invalid Details')
+            $('#modal-body-content').html(error)
+
+        }
+        $('#myModal').modal('show')
+
+    })
+</script>
+
+
+
+</html>

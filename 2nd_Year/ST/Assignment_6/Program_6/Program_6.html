@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Scope of Variable</title>
+	</head>
+	<style>
+		*{			
+			font-size: 20px;
+		}
+		#num1, #num2{
+			width: 200px;
+			height: 30px;
+			padding: 10px;
+			margin: 5px;
+			border: 2px solid black;
+		}
+		#submit{
+			border: none;
+		}
+		#answer{		
+			padding: 10px;
+			margin: 5px;
+			font-size: 20px;
+			width: 300px;
+		}
+	</style>
+	<body>
+		<center>
+			<h1>Scope of Variable</h1>
+			<br>
+			<form onsubmit="return solve()">
+					<table border="0">
+						<tr>
+							<td>Enter Number 1:- </td>
+							<td>
+								<input type="text" max="50" placeholder="Enter Number 1" id="num1">
+							</td>
+						</tr>
+					</table>
+				<input type="submit" id="submit" value="Check Scope of Variable">
+			</form>
+			<div id="answer"></div>
+		</center>
+			
+	</body>
+	
+	<script>
+		var x = 10;
+		print("Global:- "+x);
+		function solve(){
+			var x = 0;
+			print(x);
+			var inputNum1=document.getElementById("num1").value;	
+			if(inputNum1 == "")
+				alert("Please enter both values!");
+			else{
+				x= parseInt(inputNum1);
+				print("Local:- "+x);
+			}
+			return false;
+			
+		}
+		
+		function print(y){			
+				var division = document.getElementById("answer");				
+				division.innerHTML=division.innerHTML + "<br>Value of X is :- "+y;
+		}
+	</script>
+</html>

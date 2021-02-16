@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <title>
+        Assignment 1
+    </title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .base {
+        background-color: #2c6ed5;
+    }
+
+    .base2 {
+        align-items: center;
+        text-align: center;
+        display: flex;
+    }
+</style>
+
+<body class='base'>
+
+    <div class="container">
+
+        <h1 style='text-align: center; color :#fff'>Subscribe for the Newsletter!</h1>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td colspan="1">
+                        <form class="well form-horizontal">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Subscribe</label>
+                                    <div class="col-md-8 ">
+                                        <input id="subscribe" class="form-control" name="Subscribe" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="container" id="categories" style="display: none">
+
+                                    <h3>Categories</h3>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Annual Fest</label>
+                                        <div class="col-md-8 ">
+                                            <input id="annualfest" class="form-control category" name="Annual Fest"
+                                                type="checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Drishti Events</label>
+                                        <div class="col-md-8 ">
+                                            <input id="drishti" class="form-control category" name="Drishti Events"
+                                                type="checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">ACM Events</label>
+                                        <div class="col-md-8 ">
+                                            <input id="acm" class="form-control category" name="ACM Events"
+                                                type="checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">CEV Events</label>
+                                        <div class="col-md-8 ">
+                                            <input id="cev" class="form-control category" name="CEV Events"
+                                                type="checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">SEC Events</label>
+                                        <div class="col-md-8 ">
+                                            <input id="sec" class="form-control category" name="SEC Events"
+                                                type="checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">CHRD Events</label>
+                                        <div class="col-md-8 ">
+                                            <input id="chrd" class="form-control category" name="CHRD Events"
+                                                type="checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Scosh Events</label>
+                                        <div class="col-md-8 ">
+                                            <input id="scosh" class="form-control category" name="Scosh Events"
+                                                type="checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Summer Schools</label>
+                                        <div class="col-md-8 ">
+                                            <input id="summerschools" class="form-control category"
+                                                name="Summer Schools" type="checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Conferences/Workshops</label>
+                                        <div class="col-md-8 ">
+                                            <input id="workshops" class="form-control category" name="Workshops"
+                                                type="checkbox">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="container inputGroupContainer">
+                                        <button style='width: 100%' type='button' class='btn btn-primary' id='submit'>
+                                            Confirm Subscription</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+
+<script>
+    let subscribed = false
+
+    $('#subscribe').on('change', (evt) => {
+        subscribed = !subscribed
+        if (subscribed) {
+            $('#categories').show()
+        } else {
+            $('#categories').hide()
+
+        }
+    })
+    $('#submit').on('click', () => {
+        try {
+            let checked = []
+            if (subscribed) {
+                $(".category").map(function () {
+                    if (this.checked) checked.push(this.name)
+                })
+                if (checked.length == 0) {
+                    throw 'Please check at least one Category!'
+                } else {
+
+                    var newWindow = window.open("Subscriptions", "_blank", "width=300,height=300");
+                    var html = '<h3>Your Subscriptions</h3><p>'
+                    checked.forEach((c) => html += c + '<br>')
+                    html += '</p>'
+                    newWindow.document.write(html);
+                }
+            } else {
+
+                var newWindow = window.open("Subscriptions", "_blank", "width=300,height=300");
+                newWindow.document.write("<h3>No Subscriptions</h3>");
+
+            }
+        } catch (e) {
+            alert(e)
+        }
+
+
+    })
+</script>
+
+
+
+</html>

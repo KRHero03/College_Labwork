@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+    <head>
+        <title>Assignment 7 - Question 1</title>
+    </head>
+    <style>
+    *{
+        font-family: "Verdana";
+        font-size: 20px;
+        padding: 5px;
+        margin: 5px;
+    }
+    </style>
+    <body>
+        <p id="para1"></p>
+        <input type="button" id="button1" value="Click Me for Paragraph" onclick='document.getElementById("para2").innerHTML="Question 2 (1)<br>This is a paragraph in which Name is displayed using button!<br><b>Name:-</b> "+p1.firstName+" "+p1.lastName+"<br>";
+        '><br>
+        <p id="para2"></p>
+        <input type="button" id="button2" value="Click Me to get Name here!" onclick="displayButton()"><br><br>
+        <input type="button" id="button3" value="Click Me for Paragraph 2" onclick="displayParagraph()"><br>
+        <p id="para3"></p>
+        
+
+        <form>
+            <table>
+                <tr>
+                    <td id="firstNameLabel" onmouseout="onMouseOut('firstNameLabel')" onmouseover="onMouseOver('firstNameLabel')">First Name:- </td>
+                    <td><input type="text" id="firstName" placeholder="Enter First Name..." maxlength="50" onfocus="onFocus(document.getElementById('firstName'))" onfocusout="onFocusOut(document.getElementById('firstName'))"></td>
+                </tr>
+                <tr>
+                    <td id="middleNameLabel" onmouseout="onMouseOut('middleNameLabel')" onmouseover="onMouseOver('middleNameLabel')">Middle Name:- </td>
+                    <td><input type="text" id="middleName" placeholder="Enter Middle Name..." maxlength="50" onfocus="onFocus(document.getElementById('middleName'))" onfocusout="onFocusOut(document.getElementById('middleName'))"></td>
+                </tr>
+                <tr>
+                    <td id="lastNameLabel" onmouseout="onMouseOut('lastNameLabel')" onmouseover="onMouseOver('lastNameLabel')">Last Name:- </td>
+                    <td><input type="text" id="lastName" placeholder="Enter Last Name..." maxlength="50" onfocus="onFocus(document.getElementById('lastName'))" onfocusout="onFocusOut(document.getElementById('lastName'))"></td>
+                </tr>
+                <tr>
+                    <td id="DOBLabel" onmouseout="onMouseOut('DOBLabel')" onmouseover="onMouseOver('DOBLabel')">Date of Birth:- </td>
+                    <td><input type="date" id="DOB" placeholder="Enter DOB..." onfocus="onFocus(document.getElementById('DOB'))" onfocusout="onFocusOut(document.getElementById('DOB'))"></td>
+                </tr>
+                <tr>
+                    <td id="addressLabel" onmouseout="onMouseOut('addressLabel')" onmouseover="onMouseOver('addressLabel')">Address:- </td>
+                    <td><textarea  id="address" placeholder="Enter Address..." maxlength="200" onfocus="onFocus(document.getElementById('address'))" onfocusout="onFocusOut(document.getElementById('address'))"></textarea></td>
+                </tr>
+                <tr>
+                    <td id="emailLabel" onmouseout="onMouseOut('emailLabel')" onmouseover="onMouseOver('emailLabel')">Email:- </td>
+                    <td><input type="email" id="email" placeholder="Enter Email..." maxlength="50" onfocus="onFocus(document.getElementById('email'))" onfocusout="onFocusOut(document.getElementById('email'))"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Submit Details" onclick="displayForm()"></td>
+                </tr>
+            </table>
+        </form>
+        <p id="para4"></p>
+    <script>   
+        alert("Hello User!!");     
+        var p1=new Object();
+        p1.firstName="Krunal";
+        p1.lastName="Rank";
+        p1.city="Jamnagar";
+        p1.dob=new Date(1999,09,06);
+        p1.rollNo="U18CO081";
+        document.getElementById("para1").innerHTML="Question 1:- <br><table><tr><td>Name</td><td>"+p1.firstName+" "+p1.lastName+"</td></tr><tr><td>DOB</td><td>"+p1.dob.getFullYear()+"-"+p1.dob.getMonth()+"-"+p1.dob.getDate()+"</td></tr><tr><td>City</td><td>"+p1.city+"</td></tr><tr><td>Roll No.</td><td>"+p1.rollNo+"</td></tr></table><br>";
+        
+        displayParagraph=function(){
+            document.getElementById("para3").innerHTML="Question 2 (3)<br> This is a paragraph in which Name is displayed using button!<br><b>Name:-</b> "+p1.firstName+" "+p1.lastName+"<br>";
+        }
+        displayButton=function(){
+            document.getElementById("button2").value=p1.firstName+" "+p1.lastName;
+        }
+        displayForm = function(){
+            alert("Success!!");
+            var firstNameTextView = document.getElementById("firstName");
+            var lastNameTextView = document.getElementById("middleName");
+            var middleNameTextView = document.getElementById("lastName");
+            var DOBDate = document.getElementById("DOB");
+            var addressTextView = document.getElementById("address");
+            var emailTextView = document.getElementById("email");
+
+            var firstName=firstNameTextView.value;
+            var lastName=lastNameTextView.value;
+            var middleName=middleNameTextView.value;
+            var DOB = DOBDate.value;
+            var address=addressTextView.value;
+            var email=emailTextView.value;
+
+            var p2 = new Object();
+            p2.firstName=firstName;
+            p2.lastName=lastName;
+            p2.middleName=middleName;
+            p2.dob=DOB;
+            p2.address=address;
+            p2.email=email;
+
+            document.getElementById("para4").innerHTML="Question 3:- <br><table><tr><td>Name</td><td>"+p2.firstName+" "+p2.middleName+" "+p2.lastName+"</td></tr><tr><td>DOB</td><td>"+p2.dob+"</td></tr><tr><td>Email</td><td>"+p2.email+"</td></tr><tr><td>Address</td><td>"+p2.address+"</td></tr></table><br>";
+        
+
+        }
+        onFocus = function(temp){
+            temp.style.background="#ddd";
+        }
+        
+        onFocusOut = function(temp){
+            temp.style.background="#ffffff";
+        }
+
+        onMouseOver=function(temp){
+            var obj=document.getElementById(temp);
+            obj.style.border="1px solid black";
+        }
+
+        onMouseOut=function(temp){            
+            var obj=document.getElementById(temp);
+            obj.style.removeProperty("border");
+        }
+    </script>
+    </body>
+</html>

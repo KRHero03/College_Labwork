@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Festivals : 15 August</title>
+	<style>
+		img{
+		width: 500px;
+		height: 500px;
+		background-size: contain;
+		}
+		.card{
+		background-color: transparent;
+		float: left;
+  		width: 500px;
+  		height: 500px;
+  		perspective: 1000px;
+		margin-left: 100px;
+		margin-right: 50px;
+		}
+		.cardInternal {
+ 		position: relative;
+  		width: 100%;
+  		height: 100%;
+  		text-align: center;
+  		transition: transform 0.8s;
+  		transform-style: preserve-3d;
+		}
+		.card:hover .cardInternal{
+  		transform: rotateY(180deg);
+		}
+		.cardFront, .cardBack {
+  		position: absolute;
+  		width: 100%;
+  		height: 100%;
+  		backface-visibility: hidden;
+		}
+		.cardBack {
+  		background-color: #3EBAFF;
+  		color: white;
+  		transform: rotateY(180deg);
+		}
+		#in{
+		background-color: #FF7105;
+		}
+		#rb{
+		background-color: #FAD6B6;
+		}
+		p.title{
+		font-family: "Verdana";
+		font-size: 35px;
+		}
+		p.content{
+		font-family: "Verdana";
+		font-size: 15px;
+		}
+	</style>
+	<body>
+			<div class="card">
+				<div class="cardInternal">
+					<div class="cardFront">			
+						<img src="fest2.jpg">
+					</div>
+					<div class="cardBack" id="in">
+						<p class="title">Independence Day</p>
+						<p class="content">Wishing you a very happy 72<sup>nd</sup> Independence Day!</p>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="cardInternal">
+					<div class="cardFront">			
+						<img src="fest2_2.jpg">
+					</div>
+					<div class="cardBack" id="rb">
+						<p class="title">Raksha Bandhan</p>
+						<p class="content">Celebrating a strong bond between brother and sister</p>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>

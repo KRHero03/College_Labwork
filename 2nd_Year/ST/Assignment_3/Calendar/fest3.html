@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Janmashtami : 24 August</title>
+	</head>
+	<style>
+		img{
+		width: 500px;
+		height: 500px;
+		background-size: contain;
+		}
+		.card{
+		background-color: transparent;
+  		width: 500px;
+  		height: 500px;
+  		perspective: 1000px;
+		}
+		.cardInternal {
+ 		position: relative;
+  		width: 100%;
+  		height: 100%;
+  		text-align: center;
+  		transition: transform 0.8s;
+  		transform-style: preserve-3d;
+		}
+		.card:hover .cardInternal{
+  		transform: rotateY(180deg);
+		}
+		.cardFront, .cardBack {
+  		position: absolute;
+  		width: 100%;
+  		height: 100%;
+  		backface-visibility: hidden;
+		}
+		.cardBack {
+  		background-color: #3EBAFF;
+  		color: white;
+  		transform: rotateY(180deg);
+		}
+		p.title{
+		font-family: "Verdana";
+		font-size: 35px;
+		}
+		p.content{
+		font-family: "Verdana";
+		font-size: 15px;
+		}
+	</style>
+	<body>
+		<center>
+			<div class="card">
+				<div class="cardInternal">
+					<div class="cardFront">			
+						<img src="fest3.jpg">
+					</div>
+					<div class="cardBack">
+						<p class="title">Janmashtami</p>
+						<p class="content">Celebration for the birth of Hindu god Krishna</p>
+					</div>
+				</div>
+			</div>
+		</center>
+	</body>
+</html>

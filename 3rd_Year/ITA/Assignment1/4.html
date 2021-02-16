@@ -1,0 +1,261 @@
+<html>
+
+<head>
+    <title>
+        Assignment 1
+    </title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+<style>
+    body {
+
+        text-align: center;
+        font-size: 18px;
+        background-size: cover;
+        color: #fff;
+        font-family: sans-serif;
+        margin: 0;
+        padding-top: 0;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    a {
+        padding: 10px 25px;
+        background-color: #4CA74C;
+        color: #fff;
+        border-radius: 25px;
+        text-decoration: none;
+    }
+
+
+
+    #mySlider {
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+    }
+
+    .singleSlide {
+        overflow: hidden;
+        background-size: cover;
+        position: absolute;
+        left: 100%;
+        width: 100%;
+        top: 0px;
+    }
+
+    .slideOverlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+    }
+
+
+
+    #sliderNav {
+        position: relative;
+        top: -175px;
+    }
+
+    #sliderNav:hover {
+        cursor: pointer;
+    }
+
+    #sliderPrev {
+        position: relative;
+        float: left;
+        left: 50px;
+    }
+
+    #sliderNext {
+        position: relative;
+        float: right;
+        right: 50px;
+    }
+
+
+
+    @-webkit-keyframes slideIn {
+        100% {
+            left: 0;
+        }
+    }
+
+    @keyframes slideIn {
+        100% {
+            left: 0;
+        }
+    }
+
+    .slideInRight {
+        left: -100%;
+        -webkit-animation: slideIn 1s forwards;
+        animation: slideIn 1s forwards;
+    }
+
+    .slideInLeft {
+        left: 100%;
+        -webkit-animation: slideIn 1s forwards;
+        animation: slideIn 1s forwards;
+    }
+
+    @-webkit-keyframes slideOutLeft {
+        100% {
+            left: -100%;
+        }
+    }
+
+    @keyframes slideOutLeft {
+        100% {
+            left: -100%;
+        }
+    }
+
+    .slideOutLeft {
+        -webkit-animation: slideOutLeft 1s forwards;
+        animation: slideOutLeft 1s forwards;
+    }
+
+    @-webkit-keyframes slideOutRight {
+        100% {
+            left: 100%;
+        }
+    }
+
+    @keyframes slideOutRight {
+        100% {
+            left: 100%;
+        }
+    }
+
+    .slideOutRight {
+        -webkit-animation: slideOutRight 1s forwards;
+        animation: slideOutRight 1s forwards;
+    }
+</style>
+
+<body>
+    <div id="mySlider"></div>
+</body>
+
+
+<script>
+    var slideIndex = 0;
+    var currentSlideIndex = 0;
+    var slideArray = [];
+
+
+
+
+    function Slide(title, subtitle, background) {
+        this.title = title;
+        this.subtitle = subtitle;
+        this.background = background;
+        this.id = "slide" + slideIndex;
+        slideIndex++;
+        slideArray.push(this);
+    }
+
+
+
+    var slide1 = new Slide(
+        "Sardar Vallabhbhai National Institute of Technology, Surat",
+        "An Institute of National Eminence",
+        "https://d8it4huxumps7.cloudfront.net/images/partners/banners/5d31a161be69c_svnit_banner_22.jpeg",
+    );
+
+    var slide2 = new Slide(
+        "About Us",
+        "This Institute was established in 1961 as one of the RECs for imparting technical education in Civil, Mechanical and Electrical Engineering.<br>In the year 1983-84 the Under Graduate programmes in Electronics Engineering was introduced and in the year 1988-89 the UG programmes in Computer Engineering and Production Engineering was started.<br>In the year 1995-96, UG programme in Chemical Engineering was introduced. In exercise of the powers conferred by section 3 of the University Grants Commission (UGC) Act, 1956, the Central Government on the advice of the University Grants Commission, has declared the Sardar Vallabhbhai Regional College of Engineering & Technology (SVREC), Surat to Sardar Vallabhbhai National Institute of Technology (SVNIT), Surat with status of “Deemed University” with effect from 4th December 2002.<br>The Institute has been granted the status of ‘Institute of National Importance’ w.e.f. Aug. 15, 2007. At present, the Institute is offering Six UG Programmes, Eighteen PG Programmes and Three M.Sc. Five Years Integrated Programme including doctoral programme in all above branches.",
+        "https://www.svnit.ac.in/images/Guesthouse/SVPB%20Guest%20House/SVPB%20Guest%20House/SVPB%20Front%20Photo/IMG_20170901_184730.jpg",
+    );
+    var slide3 = new Slide(
+        "Courses Available",
+        "Computer Science and Engineering<br>Electronics and Communication Engineering<br>Electrical Engineering<br>Chemical Engineering<br>Civil Engineering<br>Mechanical Engineering<br>Integrated Masters Course",
+        "https://content3.jdmagicbox.com/comp/surat/j4/0261px261.x261.190814122543.w4j4/catalogue/central-library-svnit-surat-libraries-fpzj6ilf61.jpg",
+    );
+
+
+
+
+    function buildSlider() {
+        var myHTML = "";
+
+        for (var i = 0; i < slideArray.length; i++) {
+
+            myHTML += "<div id='" + slideArray[i].id +
+                "' class='singleSlide' style='background-image:url(" + slideArray[i].background + ");'>" +
+                "<div class='slideOverlay'><div style='display: block'>" +
+                "<h1>" + slideArray[i].title + "</h1>" +
+                "<h4>" + slideArray[i].subtitle + "</h4>" +
+                "</div></div>" +
+                "</div>";
+
+        }
+
+        document.getElementById("mySlider").innerHTML = myHTML;
+
+        document.getElementById("slide" + currentSlideIndex).style.left = 0;
+
+    }
+
+    buildSlider();
+
+
+
+
+
+    function prevSlide() {
+        var nextSlideIndex;
+        if (currentSlideIndex === 0) {
+            nextSlideIndex = slideArray.length - 1;
+        } else {
+            nextSlideIndex = currentSlideIndex - 1;
+        }
+        document.getElementById("slide" + nextSlideIndex).style.left = "-100%";
+        document.getElementById("slide" + currentSlideIndex).style.left = 0;
+
+        document.getElementById("slide" + nextSlideIndex).setAttribute("class", "singleSlide slideInLeft");
+        document.getElementById("slide" + currentSlideIndex).setAttribute("class", "singleSlide slideOutRight");
+
+        currentSlideIndex = nextSlideIndex;
+    }
+
+
+    function nextSlide() {
+        var nextSlideIndex;
+        if (currentSlideIndex === (slideArray.length - 1)) {
+            nextSlideIndex = 0;
+        } else {
+            nextSlideIndex = currentSlideIndex + 1;
+        }
+
+        document.getElementById("slide" + nextSlideIndex).style.left = "100%";
+        document.getElementById("slide" + currentSlideIndex).style.left = 0;
+
+        document.getElementById("slide" + nextSlideIndex).setAttribute("class", "singleSlide slideInRight");
+        document.getElementById("slide" + currentSlideIndex).setAttribute("class", "singleSlide slideOutLeft");
+        currentSlideIndex = nextSlideIndex;
+    }
+    setInterval(nextSlide, 3000);
+</script>
+
+</html>

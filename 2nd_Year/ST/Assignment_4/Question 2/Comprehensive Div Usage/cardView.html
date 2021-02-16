@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Card View</title>
+	</head>
+	<style>
+		img{
+		width: 500px;
+		height: 500px;
+		background-size: contain;
+		}
+		.card{
+		background-color: black;
+  		width: 500px;
+  		height: 500px;
+  		perspective: 1000px;
+		}
+		.cardInternal {
+ 		position: relative;
+  		width: 100%;
+  		height: 100%;
+  		text-align: center;
+  		transition: transform 0.8s;
+  		transform-style: preserve-3d;
+		}
+		.card:hover .cardInternal{
+  		transform: rotateY(180deg);
+		}
+		.cardFront, .cardBack {
+  		position: absolute;
+  		width: 100%;
+  		height: 100%;
+  		backface-visibility: hidden;
+		}
+		.cardBack {
+  		background-image: linear-gradient(to right,rgb(200,50,0),rgb(255,100,0));
+  		color: white;
+  		transform: rotateY(180deg);
+		}
+		.cardFront {
+  		background-image: linear-gradient(to right,rgb(0,50,100),rgb(0,80,140));
+		color: white;
+		
+		}
+		p.title{
+		font-family: "Verdana";
+		font-size: 35px;
+		}
+		p.content{
+		font-family: "Verdana";
+		font-size: 15px;
+		}
+	</style>
+	<body>
+		<center>
+			<p class="title">Card View using &lt;div&gt; Tag</p><br><br><br><br>
+			<div class="card">
+				<div class="cardInternal">
+					<div class="cardFront">			
+						<p class="title">Card Front Side</p>
+						<p class="content">The page is using DIV Tag. This is the front side of the Card View.</p>
+					</div>
+					<div class="cardBack">
+						<p class="title">Card Back Side</p>
+						<p class="content">This is the back side of the card which was flipped at 180 degrees at the start and again flips 180 degrees during hover.</p>
+					</div>
+				</div>
+			</div>
+		</center>
+	</body>
+</html>

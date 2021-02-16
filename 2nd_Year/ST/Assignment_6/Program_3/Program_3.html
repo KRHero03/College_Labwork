@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Concatenation of Strings</title>
+	</head>
+	<style>
+		*{			
+			font-size: 20px;
+		}
+		#num1, #num2{
+			width: 200px;
+			height: 30px;
+			padding: 10px;
+			margin: 5px;
+			border: 2px solid black;
+		}
+		#submit{
+			width: 200px;
+			border: none;
+		}
+		#answer{		
+			padding: 10px;
+			margin: 5px;
+			font-size: 20px;
+			width: 300px;
+		}
+	</style>
+	<body>
+		<center>
+			<h1>Concatenation of Strings </h1>
+			<br>
+			<form onsubmit="return solve()">
+					Enter String 1:- <input type="text" max="50" placeholder="Enter String 1" id="num1"><br>
+					Enter String 2:- <input type="text" max="50" placeholder="Enter String 2" id="num2"><br>	
+				<input type="submit" id="submit" value="Get Answer">
+			</form>
+			<div id="answer"></div>
+		</center>
+			
+	</body>
+	
+	<script>
+		function solve(){
+			var inputNum1=document.getElementById("num1").value;			
+			var inputNum2=document.getElementById("num2").value;
+			var concatenation = inputNum1+inputNum2;
+			var division = document.getElementById("answer");
+			division.innerHTML="<h2>Concatenated String:- "+concatenation+"</h2>";
+			return false;
+			
+		}
+	</script>
+</html>
