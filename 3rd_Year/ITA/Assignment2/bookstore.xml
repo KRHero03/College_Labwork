@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="./bookstore.xsd" ?>
 <!-- <!DOCTYPE bookstore SYSTEM "./bookstore.dtd"> -->
-<bookstore xmlns="http://www.w3schools.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.w3schools.com bookstore.xsd">
+<bookstore>
 
     <book category="COOKING" id="b1">
         <title lang="en">Everyday Italian</title>

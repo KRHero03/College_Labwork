@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xs:schema targetNamespace="http://www.w3schools.com/" elementFormDefault="qualified" xmlns="http://www.w3schools.com bookstore.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <xs:element name="bookstore">
         <xs:complexType>
@@ -10,13 +10,17 @@
                         <xs:sequence>
                             <xs:element name="title">
                                 <xs:complexType>
-                                    <xs:attribute name="lang" type="xs:language" default="en"></xs:attribute>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="lang" type="xs:language" default="en"></xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="author">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:pattern value="[A-Z][a-zA-Z ]*"></xs:pattern>
+                                        <xs:pattern value="[A-Z][a-zA-Z. ]*"></xs:pattern>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>

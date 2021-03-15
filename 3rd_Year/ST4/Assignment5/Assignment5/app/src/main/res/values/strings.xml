@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">CalC</string>
+    <string name="String0">0</string>
+    <string name="String1">1</string>
+    <string name="String2">2</string>
+    <string name="String3">3</string>
+    <string name="String4">4</string>
+    <string name="String5">5</string>
+    <string name="String6">6</string>
+    <string name="String7">7</string>
+    <string name="String8">8</string>
+    <string name="String9">9</string>
+    <string name="StringDel">DEL</string>
+    <string name="StringClear">CLR</string>
+    <string name="StringEqual">=</string>
+    <string name="StringAdd">+</string>
+    <string name="StringSub">-</string>
+    <string name="StringMul">*</string>
+    <string name="StringDiv">/</string>
+    <string name="StringDot">.</string>
+
+</resources>

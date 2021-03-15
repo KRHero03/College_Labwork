@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE emails SYSTEM "./emails.dtd">
-<!-- <emails 
-xmlns="http://www.w3schools.com/"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema"
-xsi:schemaLocation="http://www.w3schools.com emails.xsd"> -->
+<?xml-model href="./emails.xsd" ?>
+<!-- <!DOCTYPE emails SYSTEM "./emails.dtd"> -->
 <emails>
     <email>
         <to>Vimal</to>
