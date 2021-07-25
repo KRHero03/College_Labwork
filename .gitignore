@@ -1,3 +1,4 @@
+*.env
 *.pdf
 *.docx
 *.doc
@@ -31,6 +32,14 @@ ogl-master/
 node_modules/
 tasm/
 *.asm~
+gradle-wrapper.jar
+*/.gradle
+/captures/
+*/gradlew/*
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+key.properties
 
 # Miscellaneous
 *.class
