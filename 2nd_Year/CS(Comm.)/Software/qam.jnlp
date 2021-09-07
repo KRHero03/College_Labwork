@@ -1,0 +1,38 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+    codebase="https://www.etti.unibw.de/labalive/"
+    href="webstart/qam.jnlp?eb2n0dB=0&amp;modulation=16">
+
+    <information>
+        <title>QAM</title>
+        <vendor>labAlive - Communications Apps, Erwin Riederer</vendor>
+        <homepage href="https://www.etti.unibw.de/labalive/"/>
+        <description>Communications System Simulation</description>
+        <description kind="short">
+           Communications Apps.
+        </description>
+        
+        <icon href="/labalive/img/labalivebig.png"/>
+         
+    </information>
+
+    <security>
+        <all-permissions/>
+    </security>
+
+    <resources>
+    <!--
+       <j2se href="http://java.sun.com/products/autodl/j2se" onclick="javascript:mytracker(this.href);" version="1.8+"/>
+     -->
+        <java href="http://java.sun.com/products/autodl/j2se" onclick="javascript:mytracker(this.href);" version="1.8+"/>
+        <jar href="labAliveAppletsSigned.jar"/>
+    </resources>
+
+    <application-desc main-class="de.labAlive.launch.ApplicationStarter">
+    	<argument>de.labAlive.wiring.wirelessCommunications.modulation.Qam</argument>
+    	<argument>-eb2n0dB=0</argument>
+<argument>-modulation=16</argument>
+
+	</application-desc>
+</jnlp>

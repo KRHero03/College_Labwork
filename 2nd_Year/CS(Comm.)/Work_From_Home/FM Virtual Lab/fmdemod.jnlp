@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+    codebase="https://www.etti.unibw.de/labalive/"
+    href="webstart/fmdemod.jnlp?null">
+
+    <information>
+        <title>FM demodulator using PLL</title>
+        <vendor>labAlive - Communications Apps, Erwin Riederer</vendor>
+        <homepage href="https://www.etti.unibw.de/labalive/"/>
+        <description>Communications System Simulation</description>
+        <description kind="short">
+           Communications Apps.
+        </description>
+        
+        <icon href="/labalive/img/labalivebig.png"/>
+         
+    </information>
+
+    <security>
+        <all-permissions/>
+    </security>
+
+    <resources>
+    <!--
+       <j2se href="http://java.sun.com/products/autodl/j2se" onclick="javascript:mytracker(this.href);" version="1.8+"/>
+     -->
+        <java href="http://java.sun.com/products/autodl/j2se" onclick="javascript:mytracker(this.href);" version="1.8+"/>
+        <jar href="labAliveAppletsSigned.jar"/>
+    </resources>
+
+    <application-desc main-class="de.labAlive.launch.ApplicationStarter">
+    	<argument>de.labAlive.wiring.telecommunications.fm.demod.FmDemod</argument>
+    	
+	</application-desc>
+</jnlp>
