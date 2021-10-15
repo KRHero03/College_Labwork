@@ -1,0 +1,31 @@
+digraph p_P {
+size="8,10";
+  GT [shape=box,style=dotted,label="P"];
+  GT -> S4;
+	S4 -> S8  [color=black,style=dashed,label="pthinking[i] = 1"];
+	S8 -> S27  [color=black,style=dashed,label="phungry[i] = 1"];
+	S27 -> S13  [color=black,style=solid,label="((left<right))"];
+	S27 -> S22  [color=black,style=solid,label="((right<left))"];
+	S13 -> S17  [color=black,style=dashed,label="((forks[left]==-(1)))"];
+	S17 -> S32  [color=black,style=bold,label="((forks[right]==-(1)))"];
+	S32 -> S33  [color=black,style=dashed,label="peating[i] = 1"];
+	S33 -> S34  [color=black,style=bold,label="forks[right] = -(1)"];
+	S34 -> S35  [color=black,style=bold,label="forks[left] = -(1)"];
+	S35 -> S4  [color=black,style=solid,label="printf('%d is done eating. ',i)"];
+	S22 -> S26  [color=black,style=dashed,label="((forks[right]==-(1)))"];
+	S26 -> S32  [color=black,style=bold,label="((forks[left]==-(1)))"];
+}
+digraph init {
+size="8,10";
+  GT [shape=box,style=dotted,label="init"];
+  GT -> S10;
+	S10 -> S7  [color=black,style=dashed,label="i = 0"];
+	S7 -> S3  [color=black,style=dashed,label="((i<5))"];
+	S7 -> S6  [color=black,style=dashed,label="else"];
+	S3 -> S4  [color=black,style=dashed,label="(run P(i))"];
+	S4 -> S7  [color=black,style=dashed,label="i = (i+1)"];
+	S6 -> S9  [color=black,style=dashed,label="goto :b0"];
+	S9 -> S11  [color=black,style=bold,label="break"];
+	S11 -> S0  [color=black,style=solid,label="-end-"];
+  S11 [color=blue,style=bold,shape=box];
+}
